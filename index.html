@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    //music
+<!-- music -->
+<audio id="bg-music" loop autoplay muted>
+  <source src="audio/remember_you_omnichrd.mp3" type="audio/mpeg">
+</audio>
+
+<div id="music-toggle">
+  <svg id="icon-sound" viewBox="0 0 24 24">
+    <path d="M3 9v6h4l5 5V4L7 9H3z"/>
+  </svg>
+
+  <svg id="icon-mute" viewBox="0 0 24 24" style="display:none;">
+    <path d="M16.5 12l4.5 4.5-1.5 1.5L15 13.5l-4.5 4.5V6l4.5 4.5 4.5-4.5v6z"/>
+  </svg>
+</div>
+
+    //
+
+    <div class= "experience">
+        <canvas id="experience-canvas"></canvas>
+    </div>
+
+  <div id="resume-modal" class="resume-modal" aria-hidden="true">
+    <div class="resume-panel" role="dialog" aria-modal="true" aria-label="Resume viewer">
+      <button id="resume-close" class="resume-close" type="button" aria-label="Close resume">x</button>
+      <iframe
+        id="resume-frame"
+        class="resume-frame"
+        src=""
+        title="Resume"
+        loading="lazy"
+      ></iframe>
+    </div>
+  </div>
+
+  <div id="contact-overlay" class="contact-overlay" aria-hidden="true">
+    <div class="contact-panel" role="dialog" aria-modal="true" aria-label="Contact links">
+      <button id="contact-close" class="contact-close" type="button" aria-label="Close contact links">x</button>
+      <canvas id="contact-canvas"></canvas>
+    </div>
+  </div>
+
+    <script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@v0.149.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.149.0/examples/jsm/"
+  }
+}
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+   <script type="module" src="./main.js" ></script>
+</body>
+</html>
